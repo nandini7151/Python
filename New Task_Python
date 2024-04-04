@@ -11,3 +11,25 @@ original list.
 a) to add items to their cart,
 b) view their cart,
 c) calculate the total price.
+
+
+
+ANSWER:-
+
+1) name=input("Enter name:-")
+aadhaar_num=input("Enter Aadhaar card Number:-")
+company_name=input("Enter your company name:-")
+if len(aadhaar_num)==12:
+    print(name,company_name)
+else:
+    print("It is INVALID")
+    
+
+
+2) 
+
+
+
+
+
+
