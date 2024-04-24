@@ -4,3 +4,81 @@ b) scientific calculation
 c) conversion in binary, octal, hexadecimal, decimal
 d) temperature conversion
 e) length conversion
+
+
+ANSWER:-
+
+
+import math
+
+def calculator():
+    num1 = int(input("Enter the first num:-"))
+    operator = input("Enter the operator (+, -, *, /):-")
+    num2 = int(input("Enter the second num:-"))
+
+    if operator == '+':
+        result = num1 + num2
+    elif operator == '-':
+        result = num1 - num2
+    elif operator == '*':
+        result = num1 * num2
+    elif operator == '/':
+        if num2 != 0:
+            result = num1 / num2
+        else:
+            result = "not divisible "
+    else:
+        result = "Invalid"
+    print("Result:-", result)
+    print()
+
+def scientific():
+    num = float(input("Enter any number:-"))
+    print("Square root:", math.sqrt(num))
+    print("Sin:", math.sin(num))
+    print("Cos:", math.cos(num))
+    print()
+
+def conversion():
+    num = int(input("Enter a number:-"))
+    print("Binary:", bin(num))
+    print("Octal:", oct(num))
+    print("Hexadecimal:", hex(num))
+    print()
+
+def temperature():
+    temp = float(input("Enter temperature in Celsius:-"))
+    fah = (temp * 9/5) + 32
+    print("Temperature in Fahrenheit:", fah)
+    print()
+
+def length():
+    len = float(input("Enter length:-"))
+    print("Length in cm:", len / 100)
+    print("Length in mm:", len * 1000)
+    print()
+
+def display():
+    while True:
+        print("Choose any one")
+        print("Press 1 for Basic Arithmetic")
+        print("Press 2 for Scientific Calculator")
+        print("Press 3 for Conversion of (Binary, Octal,Hexadecimal)")
+        print("Press 4 for Temperature Conversion")
+        print("Press 5 for Length Conversion")
+        choice = input("Enter your choice:")
+
+        if choice == '1':
+            calculator()
+        elif choice == '2':
+            scientific()
+        elif choice == '3':
+            conversion()
+        elif choice == '4':
+            temperature()
+        elif choice == '5':
+            length()
+        else:
+            print("Invalid choice try again")
+
+display()
